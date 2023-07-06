@@ -33,7 +33,11 @@ def generate_password(min_Length, numbers = True, special_characters = True): #p
             meets_criteria = meets_criteria and has_special #jeśli nie mamy number lub special character to nie spełniamy criteria
     return pwd
     
-pwd = generate_password(10)
-print(pwd) #---------- hasło z minimalna długoscią 10 znaków zawiera cyfy jak i znaki specjalne #####jeśli dodalibyśmy po przecinku False wtedy mielibyśby tylko okresloną min dłiugoś hasła oraz znaki specjalne,
+
+min_length = int(input('Enter the min length: '))
+has_number = input('Do you want to have a numbers(y/n)? ').lower() == 'y' #jeśli zostanie wpisane cos innego niz 'y' to nie załączym numeru 
+has_special = input('Do you want to have special characters(y/n)?').lower() == 'y' #jeśli zostanie wpisane cos innego niz 'y' to nie załączym specjalnego znaku
+pwd = generate_password(min_length, has_number, has_special)
+print('The generated passowrd is:', pwd) #---------- hasło z minimalna długoscią 10 znaków zawiera cyfy jak i znaki specjalne #####jeśli dodalibyśmy po przecinku False wtedy mielibyśby tylko okresloną min dłiugoś hasła oraz znaki specjalne,
 
 
