@@ -1,10 +1,10 @@
-import random
+import random #słuzy do losowania
 import string #uzywamy zeby 'złapać' wszystkie małe i duze litery i znaki specjalne oraz cyfry
 
 def generate_password(min_Length, numbers = True, special_characters = True): #paramerty, które potrzebuje zeby przekazać funckje kiedy ją wywołuje,
     letters = string.ascii_letters
     digits = string.digits
-    special = string.punctuation
+    special = string.punctuation 
 
     characters = letters
     if numbers:
